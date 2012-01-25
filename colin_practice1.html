@@ -1,0 +1,83 @@
+<hmtl>
+<head>
+  <title>colin-practice1</title>
+  <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js'></script>
+</head>  
+<body>
+  <div id='first'>1</div>
+  <div id='second' class='awesome'>2</div>
+  <div id='third' class='awesome'>3</div>
+  <div id='fourth'>4</div>
+  <input id='theNumber' type='text' style='position: absolute; top: 50%; left: 50%' value='0'></input>
+  <script>
+    var one = $('#first');
+	one.css({
+		'border-style': 'dotted', 
+		'border-width':'10px',
+		'border-color': '#AAA',
+		'background-color': '#0F0',
+		'height': '100px',
+		'width': '100px',
+		'position': 'absolute', 'top': '20px', 'left': '20px',
+		'text-align': 'center',
+		'line-height': '100px',
+	})
+	var two = $('#second');
+	two.css({
+		'border-style': 'dotted',
+		'border-width':'20px',
+		'border-color': '#AAA',
+		'background-color': '#F0F',
+		'height': '75px',
+		'width': '75px',
+		'position': 'absolute','right':'20px','top': '20px',
+		'text-align': 'center',
+		'line-height': '75px',
+	})
+	var three = $('#third');
+	three.css({
+		'border-style': 'dotted',
+		'border-width':'34	px',
+		'border-color': '#AAA',
+		'background-color': '#F00',
+		'height': '50px',
+		'width': '50px',
+		'position': 'absolute','right':'20px','bottom': '20px',
+		'text-align': 'center',
+		'line-height': '50px',
+	})
+	var four = $('#fourth');
+	four.css({
+		'border-style': 'dotted',
+		'border-width':'47px',
+		'border-color': '#AAA',
+		'background-color': '#00F',
+		'height': '25px',
+		'width': '25px',
+		'position': 'absolute','left':'20px','bottom': '20px',
+		'text-align': 'center',
+		'line-height': '25px',
+	})
+	var sweet = $('.awesome');
+	sweet.css({
+		'font-family': 'verdana',
+		'font-size': '40',
+		'color': '#FFF',
+	})
+	var numberInput = $('#theNumber');
+	numberInput.change(function(){
+	  var theNumber = parseInt(numberInput.attr('value'));
+	  if(theNumber == 1){
+		one.css('background-color', 'orange');
+	} else if(theNumber == 2){
+		two.css('background-color', 'orange');
+	} else if(theNumber == 3){
+		three.css('background-color', 'orange');
+	} else if(theNumber == 4){
+		four.css('background-color', 'orange');
+		alert("Get your woman on the floor!");
+	} 
+});
+  </script>
+</body>  
+</html>
