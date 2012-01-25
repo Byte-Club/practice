@@ -1,0 +1,77 @@
+<html>
+<head>
+  <title>Practice 1</title>
+  <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js'></script>
+</head>  
+<body>
+  <div id='first'>1</div>
+  <div id='second' class='awesome'>2</div>
+  <div id='third' class='awesome'>3</div>
+  <div id='fourth'>4</div>
+  <script>
+  
+  var cssProperties = {
+            position: 'absolute',
+            border: '1px solid brown',
+            backgroundColor: 'gray'
+        };
+
+// set the basic properties
+    $('#first').css(cssProperties).height('300px').width('300px'); 
+    $('#second').css(cssProperties).css({ height: '200px', width: '200px' });        
+    $('#third').css(cssProperties);    
+    $('#fourth').css(cssProperties);
+
+//change the size
+    $('#first').css( {
+        height: '300px',
+        width: '300px'
+    } );
+
+    $('#second').css( {
+         height: '200px',
+         width: '200px',
+    } );           
+
+$('#third').css({
+    height: '277px',
+    width: '577px',
+    });
+
+$('#fourth').css({
+    height: '100px',
+    width: '190px',
+    bottom: 0,
+    left: 0
+    });
+
+// position in the corners:
+//position absolute is set on line 20
+$('#first').css({ top: '0px', left: '0px' });
+
+$('#second').css({
+    top: '50%', marginTop: '-100px',
+    left: '50%', marginLeft: '-100px'
+    });
+
+	$('#third').css({
+	    bottom: '0px',
+	    right: '0px',
+	    left: '0px'
+	    });
+
+$('#fourth').css({
+	    bottom: '0px',
+	    left: '0px',
+	    });
+	
+$('.awesome').css ({
+		    fontFamily: 'Courier',
+		    fontSize: '50px',
+		    color: 'green'
+		    });
+
+
+  </script>
+</body>  
+</html>
